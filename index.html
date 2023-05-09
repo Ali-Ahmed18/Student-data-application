@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        box-sizing: border-box;
+    }
+
+    th {
+        background-color: #b3b0b0;
+        padding: 10px;
+    }
+
+    td {
+        text-align: center;
+        background-color: lightgray;
+    }
+
+    .sub {
+        background-color: #dfdcdc;
+        padding: 10px;
+    }
+
+    .main {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1.8rem;
+    }
+    #table{
+        width: 100%;
+        border: 1px solid #666;
+    }
+    .update {
+        background-color: #b3b0b0;
+        padding: 15px;
+        position: absolute;
+        left: 37%;
+        top: 20%;
+        display: none;
+    }
+
+    .update input {
+        width: 100%;
+    }
+
+    @media screen and (max-width: 661px) {
+        .main {
+            width: 100%;
+            margin-top: 0;
+        }
+        .update{
+            left: 30%;
+        }
+    }
+
+    @media screen and (max-width: 517px) {
+        .sub {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        .sub input{
+            width: 100%;
+        }
+        .sub label{
+            font-size: 18px;
+        }
+        .update{
+            left: 20%;
+        }
+    }
+
+    @media screen and (max-width: 357px){
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        th{
+            padding: 8px 0;
+        }
+        .update{
+            left: 5%;
+            width: 90%;
+        }
+    }
+</style>
+
+<body>
+    <div class="main">
+
+        <div class="sub">
+            <label for="name">Name:
+                <input id="name" type="text" placeholder="Enter Your Name">
+            </label>
+
+            <label for="class">Class:
+                <input id="class" type="number" placeholder="Enter Your Class">
+            </label>
+            <button onclick="foo()">Submit</button>
+        </div>
+
+        <table id="table">
+            <tr>
+                <th>Index</th>
+                <th>Name</th>
+                <th>Class</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </tr>
+        </table>
+    </div>
+    <div id="update" class="update">
+
+        <label for="name">Name:
+            <input id="name" type="text" placeholder="Enter Name">
+        </label>
+        <br>
+        <br>
+        <label for="clas">Class:
+            <input id="clas" type="text" placeholder="Enter Name">
+        </label>
+        <button onclick="ok()">Ok</button>
+    </div>
+</body>
+<script src="app.js"></script>
+
+</html>
